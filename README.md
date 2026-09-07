@@ -26,7 +26,7 @@ ZIP でのダウンロードは使いません。教材コードは毎週木曜�
 
 | 週 | 内容 | 教材コード | リファレンス |
 |---|------|------|------|
-| week00 | 環境確認 | [week00/main.swift](week00/main.swift) | [00 はじめに](reference/00_はじめに.md) |
+| week00 | 環境確認 | [week00/main.swift](week00/main.swift) | [00 はじめに](reference/00_intro.md) |
 | week01 | 型と制御構文の再確認、配列・辞書・範囲 | 11/5 公開 | 11/5 公開 |
 | week02 | Optional | 11/12 公開 | 11/12 公開 |
 | week03 | 関数とタプル | 11/19 公開 | 11/19 公開 |
