@@ -14,14 +14,14 @@ Swift で学ぶ概念が、Java、Kotlin、TypeScript、Go、Rust ではどう�
 | 複数の戻り値 | 03 | 無し（クラスを作る） | タプル `(Int, String)` | `Pair`、`data class` | タプル `[number, string]` | 多値返却 | タプル `(i32, String)` |
 | 値型の構造体 | 04 | `record`（Java 16〜、参照型） | `struct`（値型） | `data class`（参照型） | 無し（すべて参照） | `struct`（値型） | `struct`（所有権で管理） |
 | 計算プロパティ | 04 | getter メソッド | `var area: Double { ... }` | `val area get() = ...` | `get area() { ... }` | メソッド | メソッド |
-| 型の後付け拡張 | 04, 08 | 無し | `extension` | 拡張関数 | 宣言のマージ | 同じパッケージ内でメソッド追加 | `impl` ブロック |
+| 型の後付け拡張 | 07 | 無し | `extension` | 拡張関数 | 宣言のマージ | 同じパッケージ内でメソッド追加 | `impl` ブロック |
 | 値を持つ列挙型 | 05 | `enum`（フィールド固定）、`sealed`（Java 17〜） | `enum` と associated value | `sealed class` | 判別可能なユニオン | 無し（`iota` と定数） | `enum`（データ付き） |
-| 参照型と継承 | 06 | `class extends` | `class`、`override`、`final` | `open class` | `class extends` | 埋め込み（継承は無い） | 継承は無い（トレイト） |
-| 無名関数 | 07 | ラムダ式（Java 8〜） | クロージャ `{ $0 * 2 }` | ラムダ `{ it * 2 }` | アロー関数 | 関数リテラル | クロージャ `\|x\| x * 2` |
-| 高階関数 | 07 | Stream API | `map`/`filter`/`reduce` | `map`/`filter`/`fold` | `map`/`filter`/`reduce` | 標準では少ない | イテレータの `map`/`filter`/`fold` |
-| インタフェース | 08 | `interface`（既定メソッドあり） | `protocol` と `extension` の既定実装 | `interface` | `interface`（構造的） | `interface`（暗黙の準拠） | `trait` |
-| エラー処理 | 09 | 検査例外 `throws`、`try-catch` | `throws`、`try`、`do-catch`、`Result` | 例外（非検査） | 例外 | エラーを戻り値で返す | `Result<T, E>`、`?` |
-| ジェネリクス | 09 | `<T extends X>` | `<T: X>`、`where` | `<T : X>` | `<T extends X>` | `[T any]`（Go 1.18〜） | `<T: Trait>` |
-| 非同期 | 10 | `Thread`、`CompletableFuture`、仮想スレッド（21〜） | `async`/`await`、`Task` | コルーチン | `async`/`await`、`Promise` | ゴルーチン、チャネル | `async`/`await` |
+| 参照型と継承 | 04 | `class extends` | `class`、`override`、`final` | `open class` | `class extends` | 埋め込み（継承は無い） | 継承は無い（トレイト） |
+| 無名関数 | 06 | ラムダ式（Java 8〜） | クロージャ `{ $0 * 2 }` | ラムダ `{ it * 2 }` | アロー関数 | 関数リテラル | クロージャ `\|x\| x * 2` |
+| 高階関数 | 06 | Stream API | `map`/`filter`/`reduce` | `map`/`filter`/`fold` | `map`/`filter`/`reduce` | 標準では少ない | イテレータの `map`/`filter`/`fold` |
+| インタフェース | 07 | `interface`（既定メソッドあり） | `protocol` と `extension` の既定実装 | `interface` | `interface`（構造的） | `interface`（暗黙の準拠） | `trait` |
+| エラー処理 | 08 | 検査例外 `throws`、`try-catch` | `throws`、`try`、`do-catch`、`Result` | 例外（非検査） | 例外 | エラーを戻り値で返す | `Result<T, E>`、`?` |
+| ジェネリクス | 08 | `<T extends X>` | `<T: X>`、`where` | `<T : X>` | `<T extends X>` | `[T any]`（Go 1.18〜） | `<T: Trait>` |
+| 非同期 | 09 | `Thread`、`CompletableFuture`、仮想スレッド（21〜） | `async`/`await`、`Task` | コルーチン | `async`/`await`、`Promise` | ゴルーチン、チャネル | `async`/`await` |
 
 > 表の各セルは「対応する考え方がある」ことを示すもので、細かい意味が同じとは限りません。詳しくは各言語の公式資料で確認してください（確度：中）。
