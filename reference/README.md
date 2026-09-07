@@ -6,22 +6,22 @@ Swift（1年生・後期）の授業で扱う範囲を、Java を学んでいる
 
 | 章 | 内容 | ファイル名（予定） | 公開 |
 |---|------|------|------|
-| [00 はじめに](00_はじめに.md) | この本の範囲と読み方 | `00_はじめに.md` | 公開済み |
-| 01 型と制御構文・コレクション | `let`/`var`、基本の型、`if`/`switch`/`for`、配列・辞書・範囲 | `01_型と制御構文・コレクション.md` | 11/5 |
-| 02 Optional | `nil`、`?`、`if let`/`guard let`、`??`、`!` | `02_Optional.md` | 11/12 |
-| 03 関数とタプル | 引数ラベル、既定値、`inout`、可変長引数、タプル | `03_関数とタプル.md` | 11/19 |
-| 04 構造体とプロパティ | `struct`、イニシャライザ、計算プロパティ、`didSet`、`mutating`、`extension` | `04_構造体とプロパティ.md` | 11/26 |
-| 05 列挙型と switch | `enum`、raw value、associated value、`CaseIterable`、パターンマッチ | `05_列挙型とswitch.md` | 12/3 |
-| 06 クラスと継承 | `class`、継承、`override`、`deinit`、値型と参照型 | `06_クラスと継承.md` | 12/10 |
-| 07 クロージャと高階関数 | クロージャ式、省略記法、キャプチャ、`map`/`filter`/`reduce`/`sorted` | `07_クロージャと高階関数.md` | 12/17 |
-| 08 プロトコルと extension | `protocol`、準拠、既定実装、`Equatable`/`Hashable`/`Codable` | `08_プロトコルとextension.md` | 1/7 |
-| 09 エラー処理とジェネリクス | `throws`/`try`/`do-catch`、`Result`、ジェネリック関数と型制約 | `09_エラー処理とジェネリクス.md` | 1/14 |
-| 10 総合演習 | 買い物メモアプリを読む・直す・広げる。`async`/`await` と `#Preview` の読み方 | `10_総合演習.md` | 1/21 |
-| [付録A 言語対応表](付録A_言語対応表.md) | 概念ごとの Java・Kotlin・TypeScript・Go・Rust との対応 | `付録A_言語対応表.md` | 骨格を公開済み。各章と一緒に埋まります |
-| 付録B Swift 6 で変わったこと | 言語モード、`static var`、既定の MainActor、`if` 式、型付き throws | `付録B_Swift6で変わったこと.md` | 1/21 |
-| 付録C 用語集 | この本で使う用語の短い定義 | `付録C_用語集.md` | 1/29 |
-| [付録D 命名規則](付録D_命名規則.md) | キャメルケース、略語、関数名、引数ラベル | `付録D_命名規則.md` | 公開済み |
-| 付録E 詳解Swift 第5版との対応 | 各章がどの節に対応するか | `付録E_詳解Swift対応.md` | 1/29 |
+| [00 はじめに](00_intro.md) | この本の範囲と読み方 | `00_intro.md` | 公開済み |
+| 01 型と制御構文・コレクション | `let`/`var`、基本の型、`if`/`switch`/`for`、配列・辞書・範囲 | `01_basics.md` | 11/5 |
+| 02 Optional | `nil`、`?`、`if let`/`guard let`、`??`、`!` | `02_optional.md` | 11/12 |
+| 03 関数とタプル | 引数ラベル、既定値、`inout`、可変長引数、タプル | `03_functions.md` | 11/19 |
+| 04 構造体とプロパティ | `struct`、イニシャライザ、計算プロパティ、`didSet`、`mutating`、`extension` | `04_structs.md` | 11/26 |
+| 05 列挙型と switch | `enum`、raw value、associated value、`CaseIterable`、パターンマッチ | `05_enums.md` | 12/3 |
+| 06 クラスと継承 | `class`、継承、`override`、`deinit`、値型と参照型 | `06_classes.md` | 12/10 |
+| 07 クロージャと高階関数 | クロージャ式、省略記法、キャプチャ、`map`/`filter`/`reduce`/`sorted` | `07_closures.md` | 12/17 |
+| 08 プロトコルと extension | `protocol`、準拠、既定実装、`Equatable`/`Hashable`/`Codable` | `08_protocols.md` | 1/7 |
+| 09 エラー処理とジェネリクス | `throws`/`try`/`do-catch`、`Result`、ジェネリック関数と型制約 | `09_errors_generics.md` | 1/14 |
+| 10 総合演習 | 買い物メモアプリを読む・直す・広げる。`async`/`await` と `#Preview` の読み方 | `10_capstone.md` | 1/21 |
+| [付録A 言語対応表](appendix_A_languages.md) | 概念ごとの Java・Kotlin・TypeScript・Go・Rust との対応 | `appendix_A_languages.md` | 骨格を公開済み。各章と一緒に埋まります |
+| 付録B Swift 6 で変わったこと | 言語モード、`static var`、既定の MainActor、`if` 式、型付き throws | `appendix_B_swift6.md` | 1/21 |
+| 付録C 用語集 | この本で使う用語の短い定義 | `appendix_C_glossary.md` | 1/29 |
+| [付録D 命名規則](appendix_D_naming.md) | キャメルケース、略語、関数名、引数ラベル | `appendix_D_naming.md` | 公開済み |
+| 付録E 詳解Swift 第5版との対応 | 各章がどの節に対応するか | `appendix_E_shokai_swift.md` | 1/29 |
 
 ## 使い方
 
