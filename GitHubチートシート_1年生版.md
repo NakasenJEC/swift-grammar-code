@@ -39,7 +39,7 @@
 3. 右上の「**Fork**」ボタンをクリック
 4. Owner が自分のユーザー名になっていることを確認して「**Create fork**」をクリック → 完了！
 
-これで、学習ノートの全テンプレート（README、festival、week01〜week11）が自分のアカウントにコピーされます。
+これで、学習ノートの全テンプレート（README、festival、week01〜week10）が自分のアカウントにコピーされます。
 
 💡 Fork ボタンが見つからないときは、このアドレスを直接開く: https://github.com/NakasenJEC/swift-grammar-template/fork
 
