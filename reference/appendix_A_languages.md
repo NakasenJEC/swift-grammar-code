@@ -6,10 +6,13 @@ Swift で学ぶ概念が、Java、Kotlin、TypeScript、Go、Rust ではどう�
 |------|:--:|------|------|------|------|------|------|
 | 不変と可変 | 01 | `final int x` / `int x` | `let` / `var` | `val` / `var` | `const` / `let` | `const` は定数式のみ | `let` / `let mut` |
 | 型推論 | 01 | `var x = 1`（Java 10〜） | `let x = 1` | `val x = 1` | `let x = 1` | `x := 1` | `let x = 1` |
+| 文字列の埋め込み | 01 | `String.format`、`+` | `"\(x)"` | `"$x"` | `` `${x}` `` | `fmt.Sprintf` | `format!("{}", x)` |
+| 範囲 | 01 | `IntStream.range(0, n)` | `0..<n`、`0...n` | `0 until n`、`0..n` | 無し | 無し | `0..n`、`0..=n` |
 | 配列 | 01 | `int[]`、`ArrayList<Integer>` | `[Int]` | `List<Int>`、`MutableList` | `number[]` | `[]int`、スライス | `Vec<i32>` |
 | 辞書 | 01 | `HashMap<K,V>` | `[K: V]` | `Map<K,V>` | `Map<K,V>`、オブジェクト | `map[K]V` | `HashMap<K,V>` |
 | 網羅的な分岐 | 01, 05 | `switch`（Java 21 でパターンマッチ） | `switch`（全ケース必須） | `when` | `switch`、判別可能なユニオン | `switch` | `match`（全ケース必須） |
 | null 安全 | 02 | `null`、`Optional<T>`（Java 8〜） | `T?`、`if let`、`??` | `T?`、`?.`、`?:` | `T \| null`、`?.`、`??`（strictNullChecks） | `nil`、`(値, ok)` の2値返し | `Option<T>`、`match`、`?` |
+| 値が無いときの早期離脱 | 02 | `if (x == null) return;` | `guard let x else { return }` | `?: return` | `if (x == null) return;` | `if err != nil { return }` | `let Some(x) = y else { return };` |
 | 関数の引数ラベル | 03 | 無し | 外部ラベルと内部名 | 名前付き引数（呼び出し側） | 無し | 無し | 無し |
 | 複数の戻り値 | 03 | 無し（クラスを作る） | タプル `(Int, String)` | `Pair`、`data class` | タプル `[number, string]` | 多値返却 | タプル `(i32, String)` |
 | 値型の構造体 | 04 | `record`（Java 16〜、参照型） | `struct`（値型） | `data class`（参照型） | 無し（すべて参照） | `struct`（値型） | `struct`（所有権で管理） |

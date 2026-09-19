@@ -7,8 +7,8 @@ Swift（1年生・後期）の授業で扱う範囲を、Java を学んでいる
 | 章 | 内容 | ファイル名（予定） | 公開 |
 |---|------|------|------|
 | [00 はじめに](00_intro.md) | この本の範囲と読み方 | `00_intro.md` | 公開済み |
-| 01 型と制御構文・コレクション | `let`/`var`、基本の型、`if`/`switch`/`for`、配列・辞書・範囲 | `01_basics.md` | 11/5 |
-| 02 Optional | `nil`、`?`、`if let`/`guard let`、`??`、`!` | `02_optional.md` | 11/12 |
+| [01 型と制御構文・コレクション](01_basics.md) | `let`/`var`、基本の型、`if`/`switch`/`for`、配列・辞書・範囲 | `01_basics.md` | 公開済み |
+| [02 Optional](02_optional.md) | `nil`、`?`、`if let`/`guard let`、`??`、`!` | `02_optional.md` | 公開済み |
 | 03 関数とタプル | 引数ラベル、既定値、`inout`、可変長引数、タプル | `03_functions.md` | 11/26 |
 | 04 構造体とクラス | `struct`と`class`、プロパティ、イニシャライザ、`mutating`、継承と`override`、値型と参照型 | `04_structs_classes.md` | 12/3 |
 | 05 列挙型と switch | `enum`、raw value、associated value、`CaseIterable`、パターンマッチ | `05_enums.md` | 12/10 |
@@ -21,6 +21,7 @@ Swift（1年生・後期）の授業で扱う範囲を、Java を学んでいる
 | 付録C 用語集 | この本で使う用語の短い定義 | `appendix_C_glossary.md` | 1/29 |
 | [付録D 命名規則](appendix_D_naming.md) | キャメルケース、略語、関数名、引数ラベル | `appendix_D_naming.md` | 公開済み |
 | 付録E 詳解Swift 第5版との対応 | 各章がどの節に対応するか | `appendix_E_shokai_swift.md` | 1/29 |
+| [問題バンク](quizbank/README.md) | 確認テストの問題と解答。実施のたびに増えます | `quizbank/weekNN.md` | 各回の実施後 |
 
 ## 使い方
 
@@ -35,3 +36,4 @@ Swift（1年生・後期）の授業で扱う範囲を、Java を学んでいる
 |------|------|
 | 2026-09-06 | 骨格を作成（00、付録A、付録D） |
 | 2026-09-07 | 日程変更に伴い章を再編（構造体とクラスを第4章に統合、全9章） |
+| 2026-09-09 | 第1章と第2章を公開。問題バンクの置き場所（`quizbank/`）を追加 |

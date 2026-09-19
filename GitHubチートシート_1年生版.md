@@ -85,9 +85,11 @@
 2. その週のフォルダ（例：`week01`）→ `main.swift` をクリック
 3. 右上の「**Raw**」ボタンをクリック（文字だけの画面になります）
 4. ⌘A で全部選択 → ⌘C でコピー
-5. Xcode で **File > New > Project... > macOS > Command Line Tool** を選び、名前を `week01` にして作る
-6. 作られた `main.swift` の中身を全部消して ⌘V で貼る
-7. ⌘R で実行 → 下のコンソールに `OK` と `NG` の行が出れば成功
+5. Xcode で、9/28 に作ったプロジェクト `SwiftGrammar` の `main.swift` を開く
+6. 中身を全部消して ⌘V で貼る（前の週のコードは学習ノートに上げてあるので消えてかまいません）
+7. ⌘R で実行 → 下のコンソールに `OK` と `NG` の行が出れば成功。最初の行が `NG  Swift 6 の言語モード` なら、下の「プロジェクトを作り直したとき」を見る
+
+プロジェクトを作り直したとき（最初の1回もこれ）：File > New > Project... > macOS > Command Line Tool で `SwiftGrammar` を作る → 左の一覧で一番上の `SwiftGrammar` → TARGETS の `SwiftGrammar` → Build Settings → All → 検索欄に `Swift Language Version` → 「Swift Compiler - Language」の中の値を Swift 6 にする
 
 ---
 
@@ -166,7 +168,8 @@ print(scores.count)
 | 鉛筆アイコンが無い | 先生のリポジトリを開いている。自分の Fork を開く |
 | Commit changes が押せない | 何も変更していないと押せない。何か1文字変える |
 | Upload files で上書きされない | ファイル名が `main.swift` か、フォルダが合っているか確認 |
-| Raw を貼っても動かない | 貼る前に Xcode の `main.swift` の中身を全部消したか確認。Swift Language Version が 6 になっているか確認 |
+| Raw を貼っても動かない | 貼る前に Xcode の `main.swift` の中身を全部消したか確認 |
+| 最初の行が `NG  Swift 6 の言語モード` | プロジェクトの設定が Swift 5 に戻っている。STEP 5 の「プロジェクトを作り直したとき」の手順で Swift 6 にする |
 
 分からなければ、先生に声をかけるか、リモートならチャットに「今開いているページの URL」を貼ってください。URL を見ればすぐ分かります。
 
