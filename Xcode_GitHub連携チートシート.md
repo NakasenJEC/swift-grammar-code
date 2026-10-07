@@ -3,6 +3,8 @@
 > Swift（1年生・後期）補足資料（希望者向け）
 > 対象：Xcode 26.6（画面の名前が違う場合は近いものを探してください）
 > 前提：GitHubアカウントを持っていること（授業用アカウントと同じでOK）
+> 画面の名前は 2026年10月に Xcode 26.6 で確かめました
+> 日専祭のアプリを3人で管理するときは、このシートではなく「日専祭アプリを3人で GitHub で管理するガイド」（Team_GitHub_guide.md）を使ってください
 
 ---
 
@@ -33,10 +35,12 @@
 Xcodeから自分のGitHubに直接ファイルを送れるように、まずアカウントを登録します。
 
 1. Xcodeのメニューバーから **Xcode > Settings...**（または `⌘ + ,`）を開く
-2. 上のタブから **Accounts** を選ぶ
-3. 左下の **+** ボタンをクリック
+2. 左の一覧から **Source Control** を選ぶ
+3. **Accounts** の **Add Account...** をクリック
 4. **GitHub** を選んで **Continue**
-5. GitHubのユーザー名と **Personal Access Token** を入力
+5. **Account** にGitHubのユーザー名、**Token** に **Personal Access Token** を入力して **Sign In**
+
+この画面には「GitHub personal access tokens must have these scopes set:」と、必要なスコープ（admin:public_key、repo、user）が表示されます。
 
 ### Personal Access Token の作り方
 
@@ -48,7 +52,7 @@ GitHubのパスワードではなく、専用のトークンを作って使い�
 4. **Generate new token** → **Generate new token (classic)**
 5. **Note** に分かりやすい名前（例：`Xcode on MyMac`）を入力
 6. **Expiration** は好きな期間を選ぶ（90日が無難）
-7. **Select scopes** で **repo** にチェック（これだけでOK）
+7. **Select scopes** で **repo**、**admin:public_key**、**user** の3つにチェック（Xcode の登録画面に表示される3つ）
 8. 一番下の **Generate token** をクリック
 9. 表示されたトークン（`ghp_xxxxx...`）を **コピーしてXcodeに貼り付ける**
 
@@ -85,8 +89,8 @@ Xcodeで作った新しいプロジェクトは、**「Create Git repository on 
 ローカルのGitリポジトリを、GitHubと結びつけます。
 
 1. Xcodeの左側ナビゲータで **Source Control Navigator**（**⌘ + 2**）を開く
-2. **Repositories** セクションで、プロジェクト名を右クリック
-3. **New "プロジェクト名" Remote...** を選ぶ
+2. 上の **Repositories** を選び、プロジェクト名をクリック
+3. 左下のボタン（右クリックでも同じ）から **New "プロジェクト名" Remote...** を選ぶ
 4. 出てきたダイアログで以下を設定：
    - **Account**: STEP 1で登録したGitHubアカウントを選択
    - **Owner**: 自分のアカウント
@@ -106,19 +110,18 @@ Xcodeで作った新しいプロジェクトは、**「Create Git repository on 
 
 ### コミットする
 
-1. メニューバーから **Integrate > Commit...**（または **⌥ + ⌘ + C**）
-2. 左側に変更されたファイルの一覧、右側に変更内容（差分）が表示される
-3. 下の入力欄に **コミットメッセージ** を書く（例：「検索機能を追加」）
-4. 左下の **Push to remote** にチェック
-5. **Commit 1 File and Push** をクリック
+1. メニューバーから **Integrate > Commit...**（または **⌥ + ⌘ + C**）。左のナビゲータの **Changes** で **Uncommitted Changes** をクリックしても同じ画面が開く
+2. 変更されたファイルと、変更内容（差分）が表示される
+3. **Stage All** をクリック
+4. **Commit message (required)** の欄に **コミットメッセージ** を書く（例：「検索機能を追加」）
+5. **Commit** をクリック
+6. 続けて **Integrate > Push...** → **Push**（下の「プッシュする」）
 
 💡 **コミットメッセージは未来の自分への手紙です。** 「なにを」「なぜ」変えたかを簡潔に書いておくと、あとで振り返るときに役立ちます。
 
-### プッシュだけあとからやる場合
+### プッシュする
 
-Commit時にPushのチェックを入れ忘れても大丈夫です。
-
-1. **Integrate > Push...**（または **⌥ + ⌘ + K**）
+1. **Integrate > Push...**（ショートカットはありません）
 2. リモートとブランチを確認（通常は `origin/main`）
 3. **Push** をクリック
 
@@ -129,7 +132,7 @@ Commit時にPushのチェックを入れ忘れても大丈夫です。
 ### 「Authentication failed」と出る
 
 Personal Access Token が失効している可能性があります。
-**Xcode > Settings > Accounts** で該当アカウントを選び、**Remove** してから STEP 1 をやり直してください。
+**Xcode > Settings... > Source Control** の **Accounts** で該当アカウントを選び、削除してから STEP 1 をやり直してください。スコープが足りない（3つにチェックしていない）トークンでも同じことが起きます。
 
 ### 「.DS_Store」など余計なファイルが含まれてしまう
 
@@ -141,16 +144,13 @@ xcuserdata/
 *.xcuserstate
 ```
 
-Xcodeで新規プロジェクトを作るときは、自動で適切な `.gitignore` が作られるので気にしなくてOKです。
+Xcode は `.gitignore` を作りません。また「Create Git repository on my Mac」にチェックを入れて作ると、作成と同時に最初のコミットが自動で作られ、`xcuserdata` もそこに入ります。1人で使うなら困りませんが、ほかの人と使うリポジトリでは、先に `.gitignore` を用意してください（3人用のガイドを参照）。
 
 ### 間違えてコミットしてしまった
 
-直前のコミットを取り消したい場合：
+コミットの履歴は、**Source Control Navigator**（⌘ + 2）の **Repositories** でプロジェクト名をクリックすると見られます。
 
-1. **Source Control Navigator**（⌘ + 2）で、**History** タブを開く
-2. 最新のコミットの1つ前を右クリック → **Revert to Commit "..."**
-
-ただし、すでにPushしてしまった場合は履歴が残ります。気にせず、次のコミットで修正しましょう。
+間違えた内容は、直してもう一度コミットするのがいちばん安全です。すでにPushしてしまった場合も、気にせず次のコミットで修正しましょう。
 
 ---
 

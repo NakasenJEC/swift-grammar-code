@@ -52,8 +52,9 @@ ZIP でのダウンロードは使いません。教材コードは、その単�
 |---|------|
 | [AI利用ルール](AI利用ルール.md) | 生成AIの利用レベル（0／1／2）と4点セット |
 | [GitHub これだけ覚えるシート（Swift 1年生版）](GitHubチートシート_1年生版.md) | この授業で使う GitHub の操作 |
-| [Xcode 26.6 の入れ方](Xcode_26_6_install.md) | Apple Developer から Xcode 26.6 を入れる手順。期限は 10/26（月・第10回） |
+| [Xcode 26.6 の入れ方](Xcode_26_6_install.md) | Apple Developer から Xcode 26.6 を入れる手順。期限は 11/9（月・第11回、文法の授業の初回） |
 | [Xcode と GitHub の連携](Xcode_GitHub連携チートシート.md) | 希望者向け。Xcode から直接コミットする方法 |
+| [日専祭アプリを3人で GitHub で管理するガイド](Team_GitHub_guide.md) | アプリのプロジェクトを GitHub で管理すると決めたチーム向け（任意） |
 
 ## 注意
 
