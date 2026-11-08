@@ -266,7 +266,7 @@ Fatal error: Unexpectedly found nil while unwrapping an Optional value
 - 誤り指摘：Optional のまま計算する、`if let` の外で使う、`Int?` を `Int` に代入する、のうちどれか。エラーメッセージを読んで、何を直せばよいかを答えます
 - 白紙再実装：辞書から値を取り出し、無ければ既定の文字列を返す処理（5〜15行）。教材コードの演習3が近い形です
 
-生成AIは使いません（AI利用レベル0）。Xcode の Intelligence をオフにしてから受けてください。出題後は、問題と解答を問題バンクに載せます。
+生成AIは使いません（AI利用レベル0）。テストは Google フォームで答えるので、Xcode は使いません。Xcode を終了してから受けてください。出題後は、問題と解答を問題バンクに載せます。
 
 ## 詳解Swift 第5版の対応節
 
